@@ -28,6 +28,45 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jxA-gx-J5y" id="iPf-vb-XLK">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="190.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j0K-Ix-PFK">
+                                                    <rect key="frame" x="201" y="31" width="193" height="129"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-zY-Blt">
+                                                    <rect key="frame" x="20" y="31" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bH-Tc-65t">
+                                                    <rect key="frame" x="20" y="85" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcD-HP-bGx">
+                                                    <rect key="frame" x="20" y="138" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bcD-HP-bGx" firstAttribute="top" secondItem="9bH-Tc-65t" secondAttribute="bottom" constant="32" id="3I3-La-8H1"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="leading" secondItem="iPf-vb-XLK" secondAttribute="leading" constant="201" id="81r-m3-h9f"/>
+                                                <constraint firstAttribute="bottom" secondItem="bcD-HP-bGx" secondAttribute="bottom" constant="31.5" id="B7d-Pf-F7D"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="centerY" secondItem="9bH-Tc-65t" secondAttribute="centerY" id="WdM-Z1-HmM"/>
+                                                <constraint firstItem="vy9-zY-Blt" firstAttribute="top" secondItem="iPf-vb-XLK" secondAttribute="top" constant="31" id="XiM-a3-ltL"/>
+                                                <constraint firstItem="9bH-Tc-65t" firstAttribute="leading" secondItem="iPf-vb-XLK" secondAttribute="leading" constant="20" id="cve-U9-yNT"/>
+                                                <constraint firstItem="9bH-Tc-65t" firstAttribute="top" secondItem="vy9-zY-Blt" secondAttribute="bottom" constant="33" id="eaW-cr-g54"/>
+                                                <constraint firstItem="vy9-zY-Blt" firstAttribute="leading" secondItem="iPf-vb-XLK" secondAttribute="leading" constant="20" id="eiC-5T-rYJ"/>
+                                                <constraint firstItem="bcD-HP-bGx" firstAttribute="leading" secondItem="iPf-vb-XLK" secondAttribute="leading" constant="20" id="i79-c8-IGY"/>
+                                                <constraint firstAttribute="trailing" secondItem="j0K-Ix-PFK" secondAttribute="trailing" constant="20" id="j5a-eG-LsO"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="top" secondItem="vy9-zY-Blt" secondAttribute="top" id="kVX-2Q-EeT"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="leading" secondItem="vy9-zY-Blt" secondAttribute="trailing" constant="8" id="qt7-bB-gx2"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="leading" secondItem="9bH-Tc-65t" secondAttribute="trailing" constant="8" id="umv-Kc-CXa"/>
+                                                <constraint firstItem="j0K-Ix-PFK" firstAttribute="leading" secondItem="bcD-HP-bGx" secondAttribute="trailing" constant="8" id="zyZ-ra-ThL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="cqf-TS-QnA" kind="show" identifier="countryDetailsSegue" id="FT8-UC-2ka"/>
