@@ -15,6 +15,7 @@
 		08B79D8A231EAE5A000C0C59 /* Concurrency_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B79D89231EAE5A000C0C59 /* Concurrency_LabTests.swift */; };
 		08BCFD2C231EE64800D3A509 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */; };
 		08BCFD2E231EE7ED00D3A509 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */; };
+		08BCFD30231EEC4E00D3A509 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2F231EEC4E00D3A509 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		08B79D8B231EAE5A000C0C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		08BCFD2F231EEC4E00D3A509 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				08B79D76231EAE55000C0C59 /* ViewController.swift */,
 				08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */,
 				08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */,
+				08BCFD2F231EEC4E00D3A509 /* Country.swift */,
 				08B79D78231EAE55000C0C59 /* Main.storyboard */,
 				08B79D7B231EAE5A000C0C59 /* Assets.xcassets */,
 				08B79D7D231EAE5A000C0C59 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 				08BCFD2E231EE7ED00D3A509 /* CountryTableViewCell.swift in Sources */,
 				08B79D77231EAE55000C0C59 /* ViewController.swift in Sources */,
 				08BCFD2C231EE64800D3A509 /* CountryDetailsViewController.swift in Sources */,
+				08BCFD30231EEC4E00D3A509 /* Country.swift in Sources */,
 				08B79D75231EAE55000C0C59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
