@@ -43,6 +43,22 @@ class CountryFetchingService {
         dataTask.resume()
     }
     
+    func getAllCountries(completionHandler: @escaping (Result<[Country], CountryError>) -> () ) {
+        CountryFetchingService.manager.getData(from: countryEndpoint) { (result) in
+            switch result {
+            case let .success(data):
+                do {
+                    let countries = try JSONDecoder().decode([Country].self, from: data)
+                    completionHandler(.success(countries))
+                } catch {
+                    completionHandler(.failure(.jsonDecodingError(error)))
+                }
+            case let.failure(networkError):
+                completionHandler(.failure(.networkError(networkError)))
+            }
+        }
+    }
+    
     //MARK: Private Properties and Initializers
     private let urlSession = URLSession(configuration: .default)
     private init() {}
