@@ -90,13 +90,9 @@
 		08B79D73231EAE55000C0C59 /* Concurrency Lab */ = {
 			isa = PBXGroup;
 			children = (
-				08B79D76231EAE55000C0C59 /* ViewController.swift */,
-				08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */,
-				08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */,
-				08BCFD2F231EEC4E00D3A509 /* Country.swift */,
-				08BCFD35231F067400D3A509 /* NetworkError.swift */,
-				08BCFD37231F0D3D00D3A509 /* CountryError.swift */,
-				08BCFD33231EFDB400D3A509 /* CountryFetchingService.swift */,
+				08BCFD3B231F135D00D3A509 /* View Controllers */,
+				08BCFD3A231F134A00D3A509 /* Views */,
+				08BCFD39231F133900D3A509 /* Models */,
 				08B79D78231EAE55000C0C59 /* Main.storyboard */,
 				08B79D7B231EAE5A000C0C59 /* Assets.xcassets */,
 				08B79D7D231EAE5A000C0C59 /* LaunchScreen.storyboard */,
@@ -113,6 +109,34 @@
 				08B79D8B231EAE5A000C0C59 /* Info.plist */,
 			);
 			path = "Concurrency LabTests";
+			sourceTree = "<group>";
+		};
+		08BCFD39231F133900D3A509 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08BCFD2F231EEC4E00D3A509 /* Country.swift */,
+				08BCFD35231F067400D3A509 /* NetworkError.swift */,
+				08BCFD37231F0D3D00D3A509 /* CountryError.swift */,
+				08BCFD33231EFDB400D3A509 /* CountryFetchingService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		08BCFD3A231F134A00D3A509 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		08BCFD3B231F135D00D3A509 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08B79D76231EAE55000C0C59 /* ViewController.swift */,
+				08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
