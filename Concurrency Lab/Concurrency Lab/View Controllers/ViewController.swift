@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
+    
+    var countries = [Country]() {
+        didSet {
+            countryTableView.reloadData()
+        }
+    }
 
     @IBOutlet weak var countryTableView: UITableView!
     
