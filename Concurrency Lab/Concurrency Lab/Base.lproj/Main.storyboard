@@ -96,6 +96,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="YfW-52-ASk"/>
+                    <connections>
+                        <outlet property="countryTableView" destination="OU7-So-83t" id="CxG-PR-4GK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
