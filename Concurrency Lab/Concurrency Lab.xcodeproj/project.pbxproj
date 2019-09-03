@@ -13,6 +13,7 @@
 		08B79D7C231EAE5A000C0C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08B79D7B231EAE5A000C0C59 /* Assets.xcassets */; };
 		08B79D7F231EAE5A000C0C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B79D7D231EAE5A000C0C59 /* LaunchScreen.storyboard */; };
 		08B79D8A231EAE5A000C0C59 /* Concurrency_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B79D89231EAE5A000C0C59 /* Concurrency_LabTests.swift */; };
+		08BCFD2C231EE64800D3A509 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		08B79D85231EAE5A000C0C59 /* Concurrency LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Concurrency LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B79D89231EAE5A000C0C59 /* Concurrency_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency_LabTests.swift; sourceTree = "<group>"; };
 		08B79D8B231EAE5A000C0C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				08B79D74231EAE55000C0C59 /* AppDelegate.swift */,
 				08B79D76231EAE55000C0C59 /* ViewController.swift */,
+				08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */,
 				08B79D78231EAE55000C0C59 /* Main.storyboard */,
 				08B79D7B231EAE5A000C0C59 /* Assets.xcassets */,
 				08B79D7D231EAE5A000C0C59 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B79D77231EAE55000C0C59 /* ViewController.swift in Sources */,
+				08BCFD2C231EE64800D3A509 /* CountryDetailsViewController.swift in Sources */,
 				08B79D75231EAE55000C0C59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
