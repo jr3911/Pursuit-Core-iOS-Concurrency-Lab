@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+enum CountryError: Error {
+    case networkError(NetworkError)
+    case jsonDecodingError(Error)
+    
+    var description: String {
+        switch self {
+        case let .networkError(networkError):
+            return "Network Error: \(networkError)"
+        case let .jsonDecodingError(decodingError):
+            return "Decoding Error: \(decodingError)"
+        }
+    }
+    
+}
