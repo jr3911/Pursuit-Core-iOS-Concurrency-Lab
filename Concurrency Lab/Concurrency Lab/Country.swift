@@ -22,8 +22,8 @@ struct Countries: Codable {
         do {
             let countries = try JSONDecoder().decode([Country].self, from: data)
             return countries
-        } catch {
-            return [Country]()
+        } catch let decodeError {
+            throw decodeError
         }
     }
 }
