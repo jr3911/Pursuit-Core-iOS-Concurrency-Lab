@@ -62,5 +62,5 @@ class CountryFetchingService {
     //MARK: Private Properties and Initializers
     private let urlSession = URLSession(configuration: .default)
     private init() {}
-    
+    private let countryEndpoint = "https://restcountries.eu/rest/v2/name/united"
 }
