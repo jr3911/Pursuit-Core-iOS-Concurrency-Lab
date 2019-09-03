@@ -69,6 +69,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="capitalLabel" destination="9bH-Tc-65t" id="ycN-F3-zfy"/>
+                                            <outlet property="flagImageView" destination="j0K-Ix-PFK" id="t0I-wz-mqb"/>
+                                            <outlet property="nameLabel" destination="vy9-zY-Blt" id="Ujg-PX-Ogd"/>
+                                            <outlet property="populationLabel" destination="bcD-HP-bGx" id="YtZ-YA-bi0"/>
                                             <segue destination="cqf-TS-QnA" kind="show" identifier="countryDetailsSegue" id="FT8-UC-2ka"/>
                                         </connections>
                                     </tableViewCell>
