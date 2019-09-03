@@ -17,4 +17,13 @@ struct Countries: Codable {
         let population: Int?
         let flag: URL?
     }
+    
+    static func getAllCountries(from data: Data) throws -> [Country] {
+        do {
+            let countries = try JSONDecoder().decode([Country].self, from: data)
+            return countries
+        } catch {
+            return [Country]()
+        }
+    }
 }
