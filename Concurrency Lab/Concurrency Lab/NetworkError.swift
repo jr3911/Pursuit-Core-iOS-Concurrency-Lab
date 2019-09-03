@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CountryFetchError: Error, CustomStringConvertible {
+enum NetworkError: Error, CustomStringConvertible {
     case badURL
     case responseError(Error)
     case noURLResponse
