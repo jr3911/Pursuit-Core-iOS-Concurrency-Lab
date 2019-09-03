@@ -17,6 +17,8 @@
 		08BCFD2E231EE7ED00D3A509 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */; };
 		08BCFD30231EEC4E00D3A509 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2F231EEC4E00D3A509 /* Country.swift */; };
 		08BCFD32231EF59500D3A509 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD2F231EEC4E00D3A509 /* Country.swift */; };
+		08BCFD34231EFDB500D3A509 /* CountryFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD33231EFDB400D3A509 /* CountryFetchingService.swift */; };
+		08BCFD36231F067400D3A509 /* CountryFetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BCFD35231F067400D3A509 /* CountryFetchError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		08BCFD2F231EEC4E00D3A509 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		08BCFD33231EFDB400D3A509 /* CountryFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFetchingService.swift; sourceTree = "<group>"; };
+		08BCFD35231F067400D3A509 /* CountryFetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFetchError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				08BCFD2B231EE64800D3A509 /* CountryDetailsViewController.swift */,
 				08BCFD2D231EE7ED00D3A509 /* CountryTableViewCell.swift */,
 				08BCFD2F231EEC4E00D3A509 /* Country.swift */,
+				08BCFD35231F067400D3A509 /* CountryFetchError.swift */,
+				08BCFD33231EFDB400D3A509 /* CountryFetchingService.swift */,
 				08B79D78231EAE55000C0C59 /* Main.storyboard */,
 				08B79D7B231EAE5A000C0C59 /* Assets.xcassets */,
 				08B79D7D231EAE5A000C0C59 /* LaunchScreen.storyboard */,
@@ -209,8 +215,10 @@
 			files = (
 				08BCFD2E231EE7ED00D3A509 /* CountryTableViewCell.swift in Sources */,
 				08B79D77231EAE55000C0C59 /* ViewController.swift in Sources */,
+				08BCFD36231F067400D3A509 /* CountryFetchError.swift in Sources */,
 				08BCFD2C231EE64800D3A509 /* CountryDetailsViewController.swift in Sources */,
 				08BCFD30231EEC4E00D3A509 /* Country.swift in Sources */,
+				08BCFD34231EFDB500D3A509 /* CountryFetchingService.swift in Sources */,
 				08B79D75231EAE55000C0C59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
