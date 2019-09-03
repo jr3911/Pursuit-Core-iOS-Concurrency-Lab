@@ -14,7 +14,7 @@ class CountryFetchingService {
     static let manager = CountryFetchingService()
     
     //MARK: -- Internal Methods
-    func getAllCountries(from urlString: String, completionHandler: @escaping (Result<Data, CountryFetchError>) -> () ) {
+    func getData(from urlString: String, completionHandler: @escaping (Result<Data, NetworkError>) -> () ) {
         guard let url = URL(string: urlString) else {
             completionHandler(.failure(.badURL))
             return
