@@ -10,15 +10,6 @@ import Foundation
 
 struct Countries: Codable {
     let countries: [Country]
-    
-    static func getAllCountries(from data: Data) throws -> [Country] {
-        do {
-            let countries = try JSONDecoder().decode([Country].self, from: data)
-            return countries
-        } catch let decodeError {
-            throw decodeError
-        }
-    }
 }
 
 struct Country: Codable {
