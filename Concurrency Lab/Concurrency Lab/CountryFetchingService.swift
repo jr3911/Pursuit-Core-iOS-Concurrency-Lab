@@ -9,12 +9,17 @@
 import Foundation
 
 class CountryFetchingService {
-    static func getAllCountries(from urlString: String, completionHandler: @escaping (Result<Data, CountryFetchError>) -> () ) {
+    
+    //MARK: -- Static Properties
+    static let manager = CountryFetchingService()
+    
+    //MARK: -- Internal Methods
+    func getAllCountries(from urlString: String, completionHandler: @escaping (Result<Data, CountryFetchError>) -> () ) {
         guard let url = URL(string: urlString) else {
             completionHandler(.failure(.badURL))
             return
         }
-        let dataTask = URLSession().dataTask(with: url) { (data, response, error) in
+        let dataTask = self.urlSession.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 completionHandler(.failure(.responseError(error!)))
                 return
@@ -37,5 +42,9 @@ class CountryFetchingService {
         }
         dataTask.resume()
     }
+    
+    //MARK: Private Properties and Initializers
+    private let urlSession = URLSession(configuration: .default)
+    private init() {}
     
 }
