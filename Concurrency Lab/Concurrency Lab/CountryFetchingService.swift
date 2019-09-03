@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+class CountryFetchingService {
+    static func getAllCountries(from urlString: String, completionHandler: @escaping (Result<Data, CountryFetchError>) -> () ) {
+        guard let url = URL(string: urlString) else {
+            completionHandler(.failure(.badURL))
+            return
+        }
+        let dataTask = URLSession().dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                completionHandler(.failure(.responseError(error!)))
+                return
+            }
+            guard let urlResponse = response as? HTTPURLResponse else {
+                completionHandler(.failure(.noURLResponse))
+                return
+            }
+            guard let data = data else {
+                completionHandler(.failure(.noData))
+                return
+            }
+            switch urlResponse.statusCode {
+            case 200...299: break
+            default:
+                completionHandler(.failure(.badURLResponse(urlResponse.statusCode)))
+                return
+            }
+            completionHandler(.success(data))
+        }
+        dataTask.resume()
+    }
+    
+}
