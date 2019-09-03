@@ -8,9 +8,13 @@
 
 import Foundation
 
-struct Country: Codable {
-    let name: String?
-    let capital: String?
-    let population: Int?
-    let flag: URL?
+struct Countries: Codable {
+    let countries: [Country]
+    
+    struct Country: Codable {
+        let name: String?
+        let capital: String?
+        let population: Int?
+        let flag: URL?
+    }
 }
