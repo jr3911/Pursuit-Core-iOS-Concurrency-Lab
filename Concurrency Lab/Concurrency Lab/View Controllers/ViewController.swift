@@ -42,9 +42,13 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCountryTableView()
+        loadCountries()
+    }
+    
+    private func configureCountryTableView() {
         self.countryTableView.dataSource = self
         self.searchBar.delegate = self
-        loadCountries()
     }
     
     func loadCountries() {
