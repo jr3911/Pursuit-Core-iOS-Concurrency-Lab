@@ -44,9 +44,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //placeholder return
-        return UITableViewCell()
+        let country = countries[indexPath.row]
+        guard let cell = countryTableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell else { return UITableViewCell() }
+        cell.nameLabel.text = "Country: \(country.name ?? "N/A")"
+        cell.capitalLabel.text = "Capital: \(country.capital ?? "N/A")"
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedCountryPopulation = numberFormatter.string(from: NSNumber(value: country.population ?? 0))
+        cell.populationLabel.text = "Population: \(formattedCountryPopulation ?? "0")"
+        return cell
     }
-
+    
 }
 
