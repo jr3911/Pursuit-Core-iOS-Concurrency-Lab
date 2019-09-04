@@ -12,6 +12,27 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     
     var countries = [Country]() {
         didSet {
+            countriesFilteredBySearch = self.countries
+        }
+    }
+    
+    var searchString = String() {
+        didSet {
+            if self.searchString == "" {
+                self.countriesFilteredBySearch = self.countries
+            } else if self.searchString.count >= 1 {
+                countriesFilteredBySearch = [Country]()
+                for country in self.countries where country.name!.lowercased().contains(self.searchString) {
+                    countriesFilteredBySearch.append(country)
+                }
+            } else {
+                self.countriesFilteredBySearch = self.countries
+            }
+        }
+    }
+    
+    var countriesFilteredBySearch = [Country]() {
+        didSet {
             countryTableView.reloadData()
         }
     }
