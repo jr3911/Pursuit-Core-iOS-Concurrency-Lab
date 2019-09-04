@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             countryTableView.reloadData()
         }
     }
-
+    
     @IBOutlet weak var countryTableView: UITableView!
     
     override func viewDidLoad() {
@@ -40,8 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //placeholder return
-        return 0
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
