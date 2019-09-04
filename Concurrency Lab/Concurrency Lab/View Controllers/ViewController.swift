@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
+    //MARK: -- Properties
     var countries = [Country]() {
         didSet {
             countriesFilteredBySearch = self.countries
@@ -37,15 +38,18 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         }
     }
     
+    //MARK: -- IBOutlets
     @IBOutlet weak var countryTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    //MARK: -- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCountryTableView()
         loadCountries()
     }
     
+    //MARK: -- Custom Functions
     private func configureCountryTableView() {
         self.countryTableView.dataSource = self
         self.searchBar.delegate = self
@@ -66,6 +70,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         }
     }
     
+    //MARK: -- DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countriesFilteredBySearch.count
     }
@@ -82,11 +87,13 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         return cell
     }
     
+    //MARK: -- Delegate Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.searchString = searchText.lowercased()
         print(countriesFilteredBySearch.count)
     }
     
+    //MARK: -- Segue Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueIdentifier = segue.identifier else { return }
         switch segueIdentifier {

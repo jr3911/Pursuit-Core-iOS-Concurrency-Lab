@@ -9,19 +9,23 @@
 import UIKit
 
 class CountryDetailsViewController: UIViewController {
-
+    
+    //MARK: -- Delegate
     var specificCountry: Country!
     
+    //MARK: -- IBOutlets
     @IBOutlet weak var detailCountryNameLabel: UILabel!
     @IBOutlet weak var detailCapitalLabel: UILabel!
     @IBOutlet weak var detailPopulationLabel: UILabel!
     @IBOutlet weak var detailFlagImageView: UIImageView!
     
+    //MARK: -- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
     }
     
+    //MARK: -- Custom Functions
     private func setUpViews() {
         detailCountryNameLabel.text = specificCountry.name
         detailCapitalLabel.text = "Capital: \(specificCountry.capital ?? "N/A")"
