@@ -21,6 +21,22 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.countryTableView.dataSource = self
+        loadCountries()
+    }
+    
+    func loadCountries() {
+        CountryFetchingService.manager.getAllCountries { [weak self] (result) in
+            guard let self = self else { return }
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                switch result {
+                case let .success(fetchedCountries):
+                    self.countries = fetchedCountries
+                case .failure:
+                    return
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
