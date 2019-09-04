@@ -67,11 +67,11 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countries.count
+        return countriesFilteredBySearch.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let country = countries[indexPath.row]
+        let country = countriesFilteredBySearch[indexPath.row]
         guard let cell = countryTableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as? CountryTableViewCell else { return UITableViewCell() }
         cell.nameLabel.text = "Country: \(country.name ?? "N/A")"
         cell.capitalLabel.text = "Capital: \(country.capital ?? "N/A")"
