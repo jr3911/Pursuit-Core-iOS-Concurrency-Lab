@@ -87,5 +87,18 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         print(countriesFilteredBySearch.count)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else { return }
+        switch segueIdentifier {
+        case "countryDetailsSegue":
+            guard let detailsVC = segue.destination as? CountryDetailsViewController else { return }
+            guard let selectedCellPath = countryTableView.indexPathForSelectedRow else { return }
+            let selectedCountry = countriesFilteredBySearch[selectedCellPath.row]
+            detailsVC.specificCountry = selectedCountry
+        default:
+            return
+        }
+    }
+    
 }
 
