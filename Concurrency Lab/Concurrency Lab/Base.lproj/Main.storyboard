@@ -153,6 +153,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PAv-9g-vrT"/>
                     </view>
+                    <connections>
+                        <outlet property="detailCapitalLabel" destination="eMl-ps-yb1" id="f7F-zu-gMe"/>
+                        <outlet property="detailCountryNameLabel" destination="Tfg-Y5-q2u" id="dLH-hg-1zx"/>
+                        <outlet property="detailFlagImageView" destination="Zul-wc-4lY" id="5T9-qM-D95"/>
+                        <outlet property="detailPopulationLabel" destination="9ba-4o-gYF" id="Jea-ds-E0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dW2-na-jSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
