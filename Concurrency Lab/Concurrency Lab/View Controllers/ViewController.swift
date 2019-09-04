@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBOutlet weak var countryTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
