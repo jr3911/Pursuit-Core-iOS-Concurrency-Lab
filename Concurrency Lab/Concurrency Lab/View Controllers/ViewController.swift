@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     var countries = [Country]() {
         didSet {
@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.countryTableView.dataSource = self
+        self.searchBar.delegate = self
         loadCountries()
     }
     
