@@ -10,21 +10,25 @@ import UIKit
 
 class CountryDetailsViewController: UIViewController {
 
+    var specificCountry: Country!
+    
+    @IBOutlet weak var detailCountryNameLabel: UILabel!
+    @IBOutlet weak var detailCapitalLabel: UILabel!
+    @IBOutlet weak var detailPopulationLabel: UILabel!
+    @IBOutlet weak var detailFlagImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUpViews() {
+        detailCountryNameLabel.text = specificCountry.name
+        detailCapitalLabel.text = "Capital: \(specificCountry.capital ?? "N/A")"
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedCountryPopulation = numberFormatter.string(from: NSNumber(value: specificCountry.population ?? 0))
+        detailPopulationLabel.text = "Population: \(formattedCountryPopulation ?? "0")"
     }
-    */
 
 }
