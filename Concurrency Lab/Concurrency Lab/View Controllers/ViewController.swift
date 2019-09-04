@@ -82,5 +82,10 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         return cell
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchString = searchText.lowercased()
+        print(countriesFilteredBySearch.count)
+    }
+    
 }
 
